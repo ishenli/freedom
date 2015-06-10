@@ -1,0 +1,69 @@
+/**
+ * @file theme
+ * @author shenli <shenli03@baidu.com>
+ */
+@import "../base.less";
+
+
+.theme-form {
+    margin-top: 30px;
+    .btn-submit {
+        padding: 0;
+        .size(80px, 26px);
+    }
+}
+
+.theme-list {
+    padding: 10px;
+}
+
+.theme-list-item {
+    position: relative;
+    display: inline-block;
+    .size(100px, 130px);
+    vertical-align: top;
+    padding: 8px;
+    border: 2px solid transparent;
+    border-radius:@radius-normal;
+    cursor: pointer;
+
+    img {
+        .size(100px, 100px);
+    }
+
+    .selected,
+    .delete{
+        position: absolute;
+        top: -10px;
+        font-size: 20px;
+    }
+    .delete {
+        right: 0;
+        color: @global-success;
+        display: none;
+        &:hover {
+            color: @global-danger;
+        }
+    }
+    .selected {
+        left: 0;
+        color: @global-warning;
+        visibility: hidden;
+    }
+    .title {
+        .vertical-align(30px);
+        text-align: center;
+    }
+}
+
+.theme-list {
+    .theme-list-item {
+        &.status-delete .delete {
+            display: inline;
+        }
+        &.cover{
+            border-color: @global-primary-hover;
+        }
+    }
+
+}

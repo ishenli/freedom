@@ -1,0 +1,90 @@
+/**
+ * @file variable
+ * @author shenli <shenli03@baidu.com>
+ */
+// Brand Colors
+// -----------------------------------------------------------------------------
+@ns: ~"ui-";
+
+@global-primary: #3bb4f2;
+@global-primary-hover: lighten(@global-primary, 15%);
+@global-success: #5eb95e;
+@global-warning: #F37B1D;
+@global-danger: #dd514c;
+@global-white: #fff;
+@global-primary-active:@global-primary-hover;
+
+// font
+// -----------------------------------------------------------------------------
+
+@global-font-size: 12px;
+@global-font-color: #444;
+
+
+@global-link-hover:#005aa0;
+
+
+
+// Border radius
+// -----------------------------------------------------------------------------
+
+@global-radius: 0;
+@radius-normal: 2px;
+@radius-lg: 5px;
+@radius-sm: 1px;
+
+@global-rounded: 1000px;
+@global-square: 0;
+
+// Progress
+@progress-height: 9px;
+@progress-bg:#ffe8f0;
+@progress-bar-color:#fff;
+
+
+/*-------------------
+       Easing
+--------------------*/
+
+@default-easing: ease;
+
+
+/*******************************
+          Transition
+*******************************/
+@transition-default-easing: @default-easing;
+@transition-default-fill: both;
+@transition-default-duration: 300ms;
+
+@use3d-acceleration: translateZ(0);
+@backface-visibility: hidden;
+
+
+
+/*******************************
+          Dialog
+*******************************/
+@dialog-header-bg: #ccc;
+
+
+/*******************************
+          Button
+*******************************/
+@btn-font-weight: normal;
+@btn-line-height: 1.2;
+@btn-font-size: 12px;
+
+@btn-default-color: #767676;
+@btn-default-bg: #f5f5f5;
+@btn-default-border: #dfdfdf;
+
+@btn-primary-color: #fff;
+@btn-primary-bg: @global-primary;
+@btn-primary-border: @btn-primary-bg;
+@btn-primary-hover: @global-primary-hover;
+
+
+/*******************************
+          Border
+*******************************/
+@global-border-primary: @btn-default-border;

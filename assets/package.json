@@ -1,0 +1,20 @@
+{
+  "name": "mean",
+  "description": "MEAN.io: A fullstack JavaScript framework powered by MongoDB, ExpressJS, AngularJS, NodeJS.",
+  "version": "0.5.22",
+  "private": false,
+  "author": "Linnovate <mean@linnovate.net>",
+  "contributors": "https://github.com/linnovate/mean/graphs/contributors",
+  "mean": "0.5.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linnovate/mean.git"
+  },
+  "scripts": {
+    "start": "node server",
+    "mocha": "node node_modules/.bin/mocha packages/**/server/tests/**/*.js -R spec -r tools/test/mocha-req.js",
+    "karma": "node node_modules/karma/bin/karma start karma.conf.js",
+    "test": "npm run mocha && NODE_ENV=test npm run start & sleep 20 && npm run karma",
+    "postinstall": "node tools/scripts/postinstall.js"
+  }
+}

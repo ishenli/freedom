@@ -1,0 +1,62 @@
+/**
+ * @file    tab
+ * @author shenli <shenli03@baidu.com>
+ */
+/*******************************
+             Basic
+*******************************/
+@import "../base.less";
+
+.ui-nav {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    .clearfix();
+}
+
+.ui-nav-tab {
+    border-bottom: 1px solid #ddd;
+    > li {
+        float: left;
+        margin-bottom: -1px;
+        padding: 14px 20px;
+        font-size: 14px;
+        a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: @global-font-color;
+        }
+        &.ui-active a,
+        a:hover {
+            background: @global-primary;
+            color: @global-white;
+        }
+    }
+}
+
+.ui-tab-bd {
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    .transition(height .3s);
+    .ui-tab-panel {
+        position: absolute;
+        top: 0;
+        z-index: 99;
+        float: left;
+        width: 100%;
+        visibility: hidden;
+        transition: transform .3s;
+        .transform(translateX(-100%));
+        -webkit-transition: -webkit-transform .3s;
+        &.ui-active {
+            position: relative;
+            z-index: 100;
+            visibility: visible;
+            .transform(translateX(0));
+        }
+    }
+    .ui-active ~ .ui-tab-panel {
+        .transform(translateX(100%));
+    }
+}

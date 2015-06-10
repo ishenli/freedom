@@ -1,0 +1,109 @@
+/**
+ * @file mixin
+ * @author shenli <shenli03@baidu.com>
+ */
+
+.vertical-align(@height) {
+    height: @height;
+    line-height: @height;
+}
+
+.reset-button() {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    border-spacing: 0;
+}
+
+.image-2x(@normal, @retina){
+    background-image:url(@normal);
+    background-image: -webkit-image-set(url(@normal) 1x,url(@retina) 2x);
+    background-image: -mos-image-set(url(@normal) 1x,url(@retina) 2x);
+    background-image: -ms-image-set(url(@normal) 1x,url(@retina) 2x);
+    background-image: -o-image-set(url(@normal) 1x,url(@retina) 2x);
+}
+
+.bfc(){
+    overflow: hidden;
+    *zoom:1;
+}
+
+//栅格的计算
+@grid-width:21px;
+@grid-gap:20px;
+
+.n-grid(@col:24){
+    width: (@grid-width + @grid-gap)*@col - @grid-gap;
+}
+
+
+
+// =============================================================================
+// COMPONENT MIXINS
+// =============================================================================
+
+// =============================================================================
+// Border
+// =============================================================================
+.border(@color:@gray-border) {
+    border: 1px solid @color;
+}
+
+
+// Button variants
+// =============================================================================
+
+.button-variant(@color; @background; @border; @hover:@background; @border-hover:@border;) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.n-active,
+    .n-active &.n-dropdown-toggle {
+        color: @color;
+        background-color: @hover;
+        border-color: @border-hover;
+        // border-color: darken(@border, 15%);
+    }
+
+    &:active,
+    &.n-btn-active,
+    .n-active &.n-dropdown-toggle {
+        background-image: none;
+    }
+
+    &.n-disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.n-btn-active {
+            background-color: @background;
+            border-color: @border;
+        }
+    }
+
+    // for `.n-btn-group`
+    .n-btn-group &,
+    .n-btn-group-stacked & {
+        border-color: darken(@background, 5%);
+    }
+}
+
+
+// =============================================================================
+// Visual
+// =============================================================================
+
+// WebKit-style focus
+.tab-focus() {
+    // Default
+    outline: thin dotted;
+    // WebKit
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}

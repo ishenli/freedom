@@ -1,0 +1,250 @@
+/**
+ * @file    dialog
+ * @author shenli <shenli03@baidu.com>
+ */
+/*******************************
+             Basic
+*******************************/
+@import "../base.less";
+
+.ui-dialog-no-scroll {
+    overflow: hidden;
+    padding-right: 17px; //滚动条的宽度，每个浏览器不是都一样
+    height: 100%;
+}
+
+.ui-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    border: 1px solid #eee;
+    background: #FFF;
+}
+
+.ui-dialog-content{
+    background: @global-white;
+}
+
+.ui-dialog-body {
+    padding: 15px 20px;
+}
+
+.ui-dialog-hide {
+    display: none;
+}
+
+.ui-dialog-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: @global-font-color;
+    cursor: pointer;
+    font: normal 24px/14px tahoma;
+    height: 18px;
+    text-decoration: none;
+    z-index: 10;
+
+    &:hover {
+        color: #e6e6e6;
+        text-shadow: 0 0 2px #aaa;
+    }
+}
+
+.ui-dialog-header {
+    .vertical-align(35px);
+    font-size: 16px;
+    padding: 0 20px;
+    background-color: @dialog-header-bg;
+}
+
+.ui-dialog-footer {
+    border-top: 1px solid #e1e1e1;
+}
+
+.ui-dialog-message {
+    margin-bottom: 15px;
+}
+
+.ui-dialog-operation {
+    zoom: 1;
+}
+
+.ui-dialog-confirm,
+.ui-dialog-cancel {
+    display: inline;
+}
+
+.ui-dialog-operation .ui-dialog-confirm {
+    margin-right: 4px;
+}
+
+//mask
+.ui-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    .opacity(50);
+    background-color: #000;
+    display: none;
+    &.state-visible {
+        display: block;
+    }
+}
+
+/*******************************
+             Types
+*******************************/
+
+/*******************************
+             States
+*******************************/
+
+/*******************************
+             Variations
+*******************************/
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes zoomOut {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/** fade **/
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/** slide down  **/
+@-webkit-keyframes slideInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slideOutDown {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+    }
+}
+
+/** slide up  **/
+@-webkit-keyframes slideInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slideOutUp {
+    0% {
+        -webkit-transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+    }
+}
+
+/** slide left  **/
+@-webkit-keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideOutLeft {
+    0% {
+        -webkit-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+/** slide right  **/
+
+@-webkit-keyframes slideInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideOutRight {
+    0% {
+        -webkit-transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(100%);
+    }
+}

@@ -1,0 +1,43 @@
+/**
+ * @file nav
+ * @author shenli <shenli03@baidu.com>
+ */
+
+.nav-bar {
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    &.fixed-top {
+        position: fixed;
+        right: 0;
+        left: 0;
+    }
+}
+.nav-bar-inner {
+    position: relative;
+    min-height: 50px;
+    background-color: rgba(255, 255, 255, .97);
+    -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .5);
+}
+
+
+.nav-handler-set {
+    float: left;
+}
+
+.nav-handler {
+    position: relative;
+    float: left;
+    height: 50px;
+    > a {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 50px;
+        padding: 15px 25px;
+        color: #383838;
+        font-size: 16px;
+        text-align: center;
+        .transition(background-color 218ms ease,color 218ms ease);
+    }
+}

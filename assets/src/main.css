@@ -1,0 +1,1401 @@
+/**
+ * @file main
+ * @author ishenli <meshenli@gmail.com>
+ */
+/**
+ * @file base
+ * @author ishenli <meshenli@gmail.com>
+ */
+/**
+ * @file variable
+ * @author shenli <shenli03@baidu.com>
+ */
+/*-------------------
+       Easing
+--------------------*/
+/*******************************
+          Transition
+*******************************/
+/*******************************
+          Dialog
+*******************************/
+/*******************************
+          Button
+*******************************/
+/*******************************
+          Border
+*******************************/
+/**
+ * @file mixin
+ * @author shenli <shenli03@baidu.com>
+ */
+/**
+ * @file font
+ * @author ishenli <meshenli@gmail.com>
+ */
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1433849638_724996.eot');
+  /* IE9*/
+  src: url('//at.alicdn.com/t/font_1433849638_724996.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1433849638_724996.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1433849638_724996.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('//at.alicdn.com/t/font_1433849638_724996.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont-theme:after {
+  content: '\e600';
+}
+/*! normalize.css v1.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+       Base
+       ========================================================================== */
+/**
+     * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+     *    `em` units.
+     * 2. Prevent iOS text size adjust after orientation change, without disabling
+     *    user zoom.
+     */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+     * Address `font-family` inconsistency between `textarea` and other form
+     * elements.
+     */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  *font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+/**
+     * Address margins handled incorrectly in IE 6/7.
+     */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+       Links
+       ========================================================================== */
+/**
+     * Address `outline` inconsistency between Chrome and other browsers.
+     */
+a:focus {
+  outline: thin dotted;
+}
+/**
+     * Improve readability when focused and also mouse hovered in all browsers.
+     */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+       Typography
+       ========================================================================== */
+/**
+     * Address font sizes and margins set differently in IE 6/7.
+     * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+     * and Chrome.
+     */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+/**
+     * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+     */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+     * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+     */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/**
+     * Address styling not present in Safari 5 and Chrome.
+     */
+dfn {
+  font-style: italic;
+}
+/**
+     * Address differences between Firefox and other browsers.
+     * Known issue: no IE 6/7 normalization.
+     */
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+     * Address margins set differently in IE 6/7.
+     */
+p,
+pre {
+  margin: 1em 0;
+}
+/**
+     * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+     */
+code,
+kbd,
+pre,
+samp {
+  font-family: Monaco, Consolas, monospace;
+  *font-family: Monaco, Consolas, monospace;
+  font-size: 1em;
+}
+/**
+     * Improve readability of pre-formatted text in all browsers.
+     */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/**
+     * Address CSS quotes not supported in IE 6/7.
+     */
+q {
+  quotes: none;
+}
+/**
+     * Address `quotes` property not supported in Safari 4.
+     */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/**
+     * Address inconsistent and variable font size in all browsers.
+     */
+small {
+  font-size: 80%;
+}
+/**
+     * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+     */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+       Lists
+       ========================================================================== */
+/**
+     * Address margins set differently in IE 6/7.
+     */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/**
+     * Address paddings set differently in IE 6/7.
+     */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/**
+     * Correct list images handled incorrectly in IE 7.
+     */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+       Embedded content
+       ========================================================================== */
+/**
+     * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+     * 2. Improve image quality when scaled in IE 7.
+     */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+/**
+     * Correct overflow displayed oddly in IE 9.
+     */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+       Forms
+       ========================================================================== */
+/**
+     * Correct margin displayed oddly in IE 6/7.
+     */
+form {
+  margin: 0;
+}
+/**
+     * Define consistent border, margin, and padding.
+     */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+     * 1. Correct color not being inherited in IE 6/7/8/9.
+     * 2. Correct text not wrapping in Firefox 3.
+     * 3. Correct alignment displayed oddly in IE 6/7.
+     */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+/**
+     * 1. Correct font size not being inherited in all browsers.
+     * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+     *    and Chrome.
+     * 3. Improve appearance and consistency in all browsers.
+     */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+/**
+     * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+     * the UA stylesheet.
+     */
+button,
+input {
+  line-height: normal;
+}
+/**
+     * Address inconsistent `text-transform` inheritance for `button` and `select`.
+     * All other form control elements do not inherit `text-transform` values.
+     * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+     * Correct `select` style inheritance in Firefox 4+ and Opera.
+     */
+button,
+select {
+  text-transform: none;
+}
+/**
+     * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+     *    and `video` controls.
+     * 2. Correct inability to style clickable `input` types in iOS.
+     * 3. Improve usability and consistency of cursor style between image-type
+     *    `input` and others.
+     * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+     *    Known issue: inner spacing remains in IE 6.
+     */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+/**
+     * Re-set default cursor for disabled elements.
+     */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+     * 1. Address box sizing set to content-box in IE 8/9.
+     * 2. Remove excess padding in IE 8/9.
+     * 3. Remove excess padding in IE 7.
+     *    Known issue: excess padding remains in IE 6.
+     */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+/**
+     * Remove inner padding and border in Firefox 3+.
+     */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+     * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+     * 2. Improve readability and alignment in all browsers.
+     */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/* ==========================================================================
+       Tables
+       ========================================================================== */
+/**
+     * Remove most spacing between table cells.
+     */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ==========================================================================
+       HTML5 display definitions
+       ========================================================================== */
+/**
+     * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+     */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+     * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+     */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/**
+     * Prevent modern browsers from displaying `audio` without controls.
+     * Remove excess height in iOS 5 devices.
+     */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+     * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+     * Known issue: no IE 6 support.
+     */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+       Typography
+       ========================================================================== */
+/**
+     * Address styling not present in IE 6/7/8/9.
+     */
+mark {
+  background: #ff0;
+  color: #666666;
+}
+/* ==========================================================================
+       Figures
+       ========================================================================== */
+/**
+     * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+     */
+figure {
+  margin: 0;
+}
+/**
+     * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+     * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+     *    (include `-moz` to future-proof).
+     */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+}
+/**
+     * Remove inner padding and search cancel button in Safari 5 and Chrome
+     * on OS X.
+     */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]),
+[hidden] {
+  display: none;
+}
+body {
+  font: 12px/1.2 "Hiragino Sans GB", Arial, Verdana, Tahoma, "\5b8b\4f53", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+}
+.fn-hide {
+  display: none;
+}
+/**
+ * @file    dialog
+ * @author shenli <shenli03@baidu.com>
+ */
+/*******************************
+             Basic
+*******************************/
+.ui-dialog-no-scroll {
+  overflow: hidden;
+  padding-right: 17px;
+  height: 100%;
+}
+.ui-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  border: 1px solid #eee;
+  background: #FFF;
+}
+.ui-dialog-content {
+  background: #ffffff;
+}
+.ui-dialog-body {
+  padding: 15px 20px;
+}
+.ui-dialog-hide {
+  display: none;
+}
+.ui-dialog-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #444444;
+  cursor: pointer;
+  font: normal 24px/14px tahoma;
+  height: 18px;
+  text-decoration: none;
+  z-index: 10;
+}
+.ui-dialog-close:hover {
+  color: #e6e6e6;
+  text-shadow: 0 0 2px #aaa;
+}
+.ui-dialog-header {
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  padding: 0 20px;
+  background-color: #cccccc;
+}
+.ui-dialog-footer {
+  border-top: 1px solid #e1e1e1;
+}
+.ui-dialog-message {
+  margin-bottom: 15px;
+}
+.ui-dialog-operation {
+  zoom: 1;
+}
+.ui-dialog-confirm,
+.ui-dialog-cancel {
+  display: inline;
+}
+.ui-dialog-operation .ui-dialog-confirm {
+  margin-right: 4px;
+}
+.ui-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background-color: #000;
+  display: none;
+}
+.ui-mask.state-visible {
+  display: block;
+}
+/*******************************
+             Types
+*******************************/
+/*******************************
+             States
+*******************************/
+/*******************************
+             Variations
+*******************************/
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/** fade **/
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/** slide down  **/
+@-webkit-keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideOutDown {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+}
+/** slide up  **/
+@-webkit-keyframes slideInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideOutUp {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+}
+/** slide left  **/
+@-webkit-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+}
+/** slide right  **/
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideOutRight {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+}
+/**
+ * @file    tab
+ * @author shenli <shenli03@baidu.com>
+ */
+/*******************************
+             Basic
+*******************************/
+.ui-nav {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  *zoom: 1;
+}
+.ui-nav:before,
+.ui-nav:after {
+  display: table;
+  content: "";
+}
+.ui-nav:after {
+  clear: both;
+}
+.ui-nav-tab {
+  border-bottom: 1px solid #ddd;
+}
+.ui-nav-tab > li {
+  float: left;
+  margin-bottom: -1px;
+  padding: 14px 20px;
+  font-size: 14px;
+}
+.ui-nav-tab > li a {
+  padding: 3px 3px;
+  text-decoration: none;
+  color: #444444;
+}
+.ui-nav-tab > li.ui-active a,
+.ui-nav-tab > li a:hover {
+  background: #3bb4f2;
+  color: #ffffff;
+}
+.ui-tab-bd {
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+.ui-tab-bd .ui-tab-panel {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  float: left;
+  width: 100%;
+  visibility: hidden;
+  transition: transform .3s;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+}
+.ui-tab-bd .ui-tab-panel.ui-active {
+  position: relative;
+  z-index: 100;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.ui-tab-bd .ui-active ~ .ui-tab-panel {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+/**
+ * @file  form
+ * @author shenli <shenli03@baidu.com>
+ */
+/*******************************
+             Basic
+*******************************/
+.ui-form fieldset {
+  border: 0;
+}
+.ui-form legend {
+  display: none;
+}
+.ui-form-item {
+  position: relative;
+  padding: 0 0 20px 170px;
+  min-width: 300px;
+}
+.ui-form-item input {
+  vertical-align: middle;
+}
+.ui-form-item .ui-input {
+  vertical-align: middle;
+}
+.ui-form-item .ui-explain-fixed {
+  position: absolute;
+  left: 170px;
+  bottom: 10px;
+}
+.ui-form-required {
+  position: relative;
+  top: 3px;
+  font-size: 14px;
+  margin-right: 6px;
+  color: #f00;
+}
+.ui-form-text {
+  display: inline-block;
+  margin: 8px 0 10px 0;
+}
+.ui-form-text:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.ui-label {
+  float: left;
+  width: 170px;
+  margin-left: -185px;
+  padding-top: 7px;
+  text-align: right;
+  font-size: 12px;
+}
+.ui-input {
+  padding: 6px 9px;
+  line-height: 18px;
+  border: 1px solid #dfdfdf;
+  color: #595959;
+  font-size: 12px;
+}
+.ui-input:hover,
+.ui-input.ui-hover {
+  border: 1px solid #3bb4f2;
+}
+.ui-input:focus,
+.ui-input.ui-focus {
+  border: 1px solid #3bb4f2;
+  box-shadow: 0 0 3px #83cff7;
+  color: #595959;
+}
+.ui-form-explain {
+  margin: 0;
+  padding: 8px 0 0;
+  font-size: 12px;
+  color: #B2B2B2;
+}
+/*******************************
+             Types
+*******************************/
+.ui-form-large .ui-form-item {
+  padding: 0 0 26px 140px;
+}
+.ui-form-large .ui-form-item .ui-explain-fixed {
+  left: 140px;
+}
+.ui-form-large .ui-input {
+  width: 220px;
+}
+.ui-form-large .ui-label {
+  width: 140px;
+  margin-left: -150px;
+}
+/*******************************
+             States
+*******************************/
+/*******************************
+             Variations
+*******************************/
+/**
+ * @file 
+ * @author shenli <shenli03@baidu.com>
+ */
+/*******************************
+             Basic
+*******************************/
+.ui-btn {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  user-select: none;
+  transition: background-color 300ms ease-out, border-color 300ms ease-out;
+}
+.ui-btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.ui-btn:hover,
+.ui-btn:focus {
+  outline: 0;
+  color: #767676;
+  text-decoration: none;
+}
+.ui-btn:active,
+.ui-btn.ui-active {
+  background-image: none;
+  box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.125);
+}
+.ui-btn.ui-disabled,
+.ui-btn[disabled],
+fieldset[disabled] .ui-btn {
+  pointer-events: none;
+  border-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.45;
+  box-shadow: none;
+}
+.ui-btn.ui-round {
+  border-radius: 1000px;
+}
+.ui-btn.ui-radius {
+  border-radius: 2px;
+}
+.ui-btn .iconfont {
+  vertical-align: middle;
+}
+/*******************************
+             Types
+*******************************/
+/* Block button  */
+.ui-btn-block {
+  display: block;
+  width: 100%;
+}
+/*******************************
+             States
+*******************************/
+.ui-btn-primary {
+  color: #ffffff;
+  background-color: #3bb4f2;
+  border-color: #3bb4f2;
+}
+.ui-btn-primary:hover,
+.ui-btn-primary:focus,
+.ui-btn-primary:active,
+.ui-btn-primary.n-active,
+.n-active .ui-btn-primary.n-dropdown-toggle {
+  color: #ffffff;
+  background-color: #83cff7;
+  border-color: #3bb4f2;
+}
+.ui-btn-primary:active,
+.ui-btn-primary.n-btn-active,
+.n-active .ui-btn-primary.n-dropdown-toggle {
+  background-image: none;
+}
+.ui-btn-primary.n-disabled,
+.ui-btn-primary[disabled],
+fieldset[disabled] .ui-btn-primary,
+.ui-btn-primary.n-disabled:hover,
+.ui-btn-primary[disabled]:hover,
+fieldset[disabled] .ui-btn-primary:hover,
+.ui-btn-primary.n-disabled:focus,
+.ui-btn-primary[disabled]:focus,
+fieldset[disabled] .ui-btn-primary:focus,
+.ui-btn-primary.n-disabled:active,
+.ui-btn-primary[disabled]:active,
+fieldset[disabled] .ui-btn-primary:active,
+.ui-btn-primary.n-disabled.n-btn-active,
+.ui-btn-primary[disabled].n-btn-active,
+fieldset[disabled] .ui-btn-primary.n-btn-active {
+  background-color: #3bb4f2;
+  border-color: #3bb4f2;
+}
+.n-btn-group .ui-btn-primary,
+.n-btn-group-stacked .ui-btn-primary {
+  border-color: #23abf0;
+}
+.ui-btn-default {
+  color: #767676;
+  background-color: #f5f5f5;
+  border-color: #dfdfdf;
+}
+.ui-btn-default:hover,
+.ui-btn-default:focus,
+.ui-btn-default:active,
+.ui-btn-default.n-active,
+.n-active .ui-btn-default.n-dropdown-toggle {
+  color: #767676;
+  background-color: #f5f5f5;
+  border-color: #dfdfdf;
+}
+.ui-btn-default:active,
+.ui-btn-default.n-btn-active,
+.n-active .ui-btn-default.n-dropdown-toggle {
+  background-image: none;
+}
+.ui-btn-default.n-disabled,
+.ui-btn-default[disabled],
+fieldset[disabled] .ui-btn-default,
+.ui-btn-default.n-disabled:hover,
+.ui-btn-default[disabled]:hover,
+fieldset[disabled] .ui-btn-default:hover,
+.ui-btn-default.n-disabled:focus,
+.ui-btn-default[disabled]:focus,
+fieldset[disabled] .ui-btn-default:focus,
+.ui-btn-default.n-disabled:active,
+.ui-btn-default[disabled]:active,
+fieldset[disabled] .ui-btn-default:active,
+.ui-btn-default.n-disabled.n-btn-active,
+.ui-btn-default[disabled].n-btn-active,
+fieldset[disabled] .ui-btn-default.n-btn-active {
+  background-color: #f5f5f5;
+  border-color: #dfdfdf;
+}
+.n-btn-group .ui-btn-default,
+.n-btn-group-stacked .ui-btn-default {
+  border-color: #e8e8e8;
+}
+/*******************************
+             Variations
+*******************************/
+/**
+ * @file  header
+ * @author shenli <shenli03@baidu.com>
+ */
+/*******************************
+             Basic
+*******************************/
+.ui-header {
+  border: none;
+  padding: 0;
+  font-weight: 700;
+  line-height: 1.33em;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+/*******************************
+             States
+*******************************/
+/*******************************
+             Variations
+*******************************/
+h2.ui-header {
+  font-size: 1.714rem;
+}
+h3.ui-header {
+  font-size: 1.28rem;
+}
+/**
+ * @file layout
+ * @author ishenli <meshenli@gmail.com>
+ */
+.wallpaper {
+  position: absolute;
+  z-index: -10;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+.main {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+/**
+ * @file nav
+ * @author shenli <shenli03@baidu.com>
+ */
+.nav-bar {
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+.nav-bar.fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+.nav-bar-inner {
+  position: relative;
+  min-height: 50px;
+  background-color: rgba(255, 255, 255, 0.97);
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+.nav-handler-set {
+  float: left;
+}
+.nav-handler {
+  position: relative;
+  float: left;
+  height: 50px;
+}
+.nav-handler > a {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50px;
+  padding: 15px 25px;
+  color: #383838;
+  font-size: 16px;
+  text-align: center;
+  -webkit-transition: background-color 218ms ease, color 218ms ease;
+  -moz-transition: background-color 218ms ease, color 218ms ease;
+  -ms-transition: background-color 218ms ease, color 218ms ease;
+  -o-transition: background-color 218ms ease, color 218ms ease;
+  transition: background-color 218ms ease, color 218ms ease;
+}
+/**
+ * @file 侧边栏
+ * @author ishenli <meshenli@gmail.com>
+ */
+.sidebar {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sidebar .docker {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -290px;
+  width: 73px;
+  height: 590px;
+}
+.sidebar .docker-list {
+  position: absolute;
+  bottom: 5px;
+  height: 128px;
+  width: 65px;
+}
+.sidebar .docker-list .item {
+  height: 31px;
+  width: 50px;
+  margin: 0 auto;
+}
+.sidebar .docker-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 5px 0;
+  color: #ffffff;
+}
+.sidebar .docker-icon:hover {
+  color: #5eb95e;
+}
+.sidebar .docker-middle {
+  height: 566px;
+  padding-top: 10px;
+  background: url(http://0.web.qstatic.com/webqqpic/style/images/dock_l.png?t=20111011001) no-repeat;
+}
+/**
+ * @file theme
+ * @author shenli <shenli03@baidu.com>
+ */
+.theme-form {
+  margin-top: 30px;
+}
+.theme-form .btn-submit {
+  padding: 0;
+  width: 80px;
+  height: 26px;
+}
+.theme-list {
+  padding: 10px;
+}
+.theme-list-item {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 130px;
+  vertical-align: top;
+  padding: 8px;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.theme-list-item img {
+  width: 100px;
+  height: 100px;
+}
+.theme-list-item .selected,
+.theme-list-item .delete {
+  position: absolute;
+  top: -10px;
+  font-size: 20px;
+}
+.theme-list-item .delete {
+  right: 0;
+  color: #5eb95e;
+  display: none;
+}
+.theme-list-item .delete:hover {
+  color: #dd514c;
+}
+.theme-list-item .selected {
+  left: 0;
+  color: #f37b1d;
+  visibility: hidden;
+}
+.theme-list-item .title {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.theme-list .theme-list-item.status-delete .delete {
+  display: inline;
+}
+.theme-list .theme-list-item.cover {
+  border-color: #83cff7;
+}
+/**
+ * @file user
+ * @author shenli <shenli03@baidu.com>
+ */
+.user-view {
+  position: absolute;
+  width: 480px;
+  padding: 20px;
+  background: #ffffff;
+  top: 50%;
+  left: 50%;
+  margin: -105px 0 0 -260px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}

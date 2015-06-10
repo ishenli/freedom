@@ -1,0 +1,46 @@
+/**
+ * @file 侧边栏
+ * @author ishenli <meshenli@gmail.com>
+ */
+@import "../base.less";
+.sidebar {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .docker{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -290px;
+        width: 73px;
+        height: 590px;
+    }
+    .docker-list{
+        position: absolute;
+        bottom: 5px;
+        height: 128px;
+        width: 65px;
+        .item{
+            height: 31px;
+            width: 50px;
+            margin: 0 auto;
+        }
+    }
+    .docker-icon {
+        display: inline-block;
+        .size(20px, 20px);
+        cursor: pointer;
+        margin: 5px 0;
+        color: @global-white;
+        &:hover {
+            color: @global-success;
+        }
+
+    }
+    .docker-middle {
+        height: 566px;
+        padding-top: 10px;
+        background: url(http://0.web.qstatic.com/webqqpic/style/images/dock_l.png?t=20111011001) no-repeat;
+    }
+}

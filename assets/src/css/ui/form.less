@@ -1,0 +1,119 @@
+/**
+ * @file  form
+ * @author shenli <shenli03@baidu.com>
+ */
+@import "../base.less";
+
+/*******************************
+             Basic
+*******************************/
+
+@form-left:170px;
+.ui-form {
+    fieldset {
+        border: 0;
+    }
+    legend {
+        display: none;
+    }
+}
+
+.ui-form-item {
+    position: relative;
+    padding: 0 0 20px @form-left;
+    min-width: 300px;
+    input {
+        vertical-align: middle;
+    }
+    .ui-input {
+        vertical-align: middle;
+    }
+    .ui-explain-fixed {
+        position: absolute;
+        left: @form-left;
+        bottom: 10px;
+    }
+}
+.ui-form-required {
+    position: relative;
+    top: 3px;
+    font-size: 14px;
+    margin-right: 6px;
+    color: #f00;
+}
+.ui-form-text {
+    display: inline-block;
+    margin: 8px 0 10px 0;
+    &:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+.ui-label {
+    float: left;
+    width: @form-left;
+    margin-left: -185px;
+    padding-top: 7px;
+    text-align: right;
+    font-size: @global-font-size;
+}
+
+.ui-input {
+    padding: 6px 9px;
+    line-height: 18px;
+    border: 1px solid @global-border-primary;
+    color: #595959;
+    font-size: 12px;
+    &:hover,
+    &.@{ns}hover {
+        border: 1px solid @global-primary;
+    }
+
+    &:focus,
+    &.@{ns}focus {
+        border: 1px solid @global-primary;
+        box-shadow: 0 0 3px @global-primary-hover;
+        color: #595959;
+    }
+
+}
+
+.ui-form-explain {
+    margin: 0;
+    padding: 8px 0 0;
+    font-size: 12px;
+    color: #B2B2B2;
+}
+/*******************************
+             Types
+*******************************/
+@form-left-large:140px;
+.ui-form-large {
+    .ui-form-item {
+        padding: 0 0 26px @form-left-large;
+        .ui-explain-fixed {
+            left: @form-left-large;
+        }
+    }
+    .ui-input {
+        width: 220px;
+    }
+    .ui-label {
+        width: @form-left-large;
+        margin-left: -@form-left-large - 10px;
+    }
+}
+
+/*******************************
+             States
+*******************************/
+
+
+/*******************************
+             Variations
+*******************************/
+
