@@ -1,3 +1,2 @@
 # freedom
-
-a [Sails](http://sailsjs.org) application
+a sample app based on javascript
