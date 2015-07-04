@@ -1,6 +1,6 @@
 /**
  * @file nav
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 
 .nav-bar {
@@ -12,7 +12,12 @@
         right: 0;
         left: 0;
     }
+
+    .logo {
+        font-weight: bold;
+    }
 }
+
 .nav-bar-inner {
     position: relative;
     min-height: 50px;
@@ -21,9 +26,22 @@
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, .5);
 }
 
-
 .nav-handler-set {
     float: left;
+}
+
+.nav-handler-user {
+    float: right;
+    .avatar {
+        float: left;
+        margin: -2px 10px 0 0;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-size: cover!important;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+    }
 }
 
 .nav-handler {
@@ -38,6 +56,18 @@
         color: #383838;
         font-size: 16px;
         text-align: center;
-        .transition(background-color 218ms ease,color 218ms ease);
+        .transition(background-color 218ms ease, color 218ms ease);
+    }
+    &.nav-separate {
+        border-right: 1px solid rgba(0, 0, 0, .07);
+    }
+    &.my-set a {
+        max-width: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
+
+
+

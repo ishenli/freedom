@@ -1,6 +1,6 @@
 /**
  * @file 试图基类，提供转场动画
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 
 define(function (require) {

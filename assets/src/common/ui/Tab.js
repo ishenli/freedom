@@ -1,6 +1,6 @@
 /**
  * @file Tab
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 
 define(function (require) {

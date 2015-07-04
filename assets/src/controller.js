@@ -1,6 +1,6 @@
 /**
  * @file 控制器，用于实现Action的管理
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 
 define(function (require) {

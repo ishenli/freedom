@@ -8,7 +8,7 @@
  */
 /**
  * @file variable
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 /*-------------------
        Easing
@@ -27,7 +27,7 @@
 *******************************/
 /**
  * @file mixin
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 /**
  * @file font
@@ -640,7 +640,7 @@ a {
 }
 /**
  * @file    dialog
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 /*******************************
              Basic
@@ -847,7 +847,7 @@ a {
 }
 /**
  * @file    tab
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 /*******************************
              Basic
@@ -929,7 +929,7 @@ a {
 }
 /**
  * @file  form
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 /*******************************
              Basic
@@ -1029,7 +1029,7 @@ a {
 *******************************/
 /**
  * @file 
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 /*******************************
              Basic
@@ -1187,7 +1187,7 @@ fieldset[disabled] .ui-btn-default.n-btn-active {
 *******************************/
 /**
  * @file  header
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 /*******************************
              Basic
@@ -1213,6 +1213,28 @@ h3.ui-header {
   font-size: 1.28rem;
 }
 /**
+ * @file image
+ * @author shenli <meshenli@gmail.com>
+ */
+/*******************************
+             Basic
+*******************************/
+.image-circle {
+  border-radius: 50%;
+}
+.image-full {
+  width: 100%;
+}
+/*******************************
+             Types
+*******************************/
+/*******************************
+             States
+*******************************/
+/*******************************
+             Variations
+*******************************/
+/**
  * @file layout
  * @author ishenli <meshenli@gmail.com>
  */
@@ -1237,7 +1259,7 @@ h3.ui-header {
 }
 /**
  * @file nav
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 .nav-bar {
   min-height: 50px;
@@ -1249,6 +1271,9 @@ h3.ui-header {
   right: 0;
   left: 0;
 }
+.nav-bar .logo {
+  font-weight: bold;
+}
 .nav-bar-inner {
   position: relative;
   min-height: 50px;
@@ -1258,6 +1283,19 @@ h3.ui-header {
 }
 .nav-handler-set {
   float: left;
+}
+.nav-handler-user {
+  float: right;
+}
+.nav-handler-user .avatar {
+  float: left;
+  margin: -2px 10px 0 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: cover!important;
+  background-repeat: no-repeat !important;
+  background-position: center!important;
 }
 .nav-handler {
   position: relative;
@@ -1277,6 +1315,15 @@ h3.ui-header {
   -ms-transition: background-color 218ms ease, color 218ms ease;
   -o-transition: background-color 218ms ease, color 218ms ease;
   transition: background-color 218ms ease, color 218ms ease;
+}
+.nav-handler.nav-separate {
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+.nav-handler.my-set a {
+  max-width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /**
  * @file 侧边栏
@@ -1325,7 +1372,7 @@ h3.ui-header {
 }
 /**
  * @file theme
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 .theme-form {
   margin-top: 30px;
@@ -1385,7 +1432,7 @@ h3.ui-header {
 }
 /**
  * @file user
- * @author shenli <shenli03@baidu.com>
+ * @author shenli <meshenli@gmail.com>
  */
 .user-view {
   position: absolute;

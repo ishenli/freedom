@@ -36,7 +36,7 @@ module.exports.routes = {
 
     'get /': {
         controller: 'home',
-        action:'index'
+        action: 'index'
     },
 
     /***************************************************************************
@@ -57,19 +57,25 @@ module.exports.routes = {
         controller: 'wallpaper',
         action: 'find'
     },
-    'post /wallpaper/upload':{
+    'post /wallpaper/upload': {
         controller: 'wallpaper',
         action: 'create'
     },
     'post /wallpaper/selectWallpaper': {
         controller: 'wallpaper',
-        action:'selectWallpaper'
+        action: 'selectWallpaper'
     },
     'post /wallpaper/destroy': {
         controller: 'wallpaper',
-        action:'destroy'
+        action: 'destroy'
     },
 
     // user
-    'post /user' : 'user.register'
+    'post /user': 'user.register',
+
+
+    // music
+    'get /music': {
+        view:'music'
+    }
 };

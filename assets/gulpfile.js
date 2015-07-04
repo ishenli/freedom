@@ -14,7 +14,7 @@ gulp.task('html2js', function () {
 });
 
 gulp.task('less', function () {
-    return gulp.src('src/main.less')
+    return gulp.src(['src/main.less','src/music.less'])
         .pipe(less())
         .pipe(gulp.dest('src'));
 });

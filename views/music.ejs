@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>music</title>
+    <link rel="stylesheet" href="./src/music.css"/>
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+</head>
+<body>
+
+<aside class="aside">
+    <nav class="nav-primary">
+        <ul class="nav">
+            <li><a href="#"><span>哈哈哈</span></a></li>
+        </ul>
+    </nav>
+</aside>
+<section class="main-container">
+    <section class="main" id="main">
+        <div class="hbox">
+            <h2 class="title">Discover</h2>
+            <div class="row">
+                <ul class="row-sm cover-list">
+                    <li class="col col-lg-2">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="http://flatfull.com/themes/musik/images/p1.jpg" alt="" class="image-full">
+                            </div>
+                            <div class="text-wrap">
+                                <a href="#"><h4>Tempered Song</h4></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <video id="really-cool-video" class="video-js vjs-default-skin vjs-flat-skin" controls
+               preload="auto" width="100%" height="60" poster=""
+               data-setup='{}'>
+            <!--<source src="really-cool-video.mp4" type='video/mp4'>-->
+            <source src="./video/music.mp3" type='video/mp4'>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser
+                that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+    </footer>
+
+</section>
+<!--<script>
+    var player = videojs('really-cool-video', { /* Options */ }, function() {
+        console.log('Good to go!');
+
+        this.play(); // if you don't trust autoplay for some reason
+
+        // How about an event listener?
+        this.on('ended', function() {
+            console.log('awww...over so soon?');
+        });
+    });
+</script>-->
+<script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-2/esl.min.js"></script>
+<!-- edp: { "loaderAutoConfig": false } -->
+<script src="common/config.js"></script>
+<script>
+    require(['music/main', 'kira'], function (main, kira) {
+        kira.start();
+        main.enter();
+    });
+</script>
+</body>
+</html>

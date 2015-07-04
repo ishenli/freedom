@@ -1,0 +1,86 @@
+/**
+ * @file music
+ * @author shenli <meshenli@gmail.com>
+ */
+
+@import "./player.less";
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+html {
+    background-color: #f2f4f8;
+}
+
+.aside {
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+    float: none;
+    color: #7d94a4;
+    width: 70px;
+    background-color: #181f24;
+}
+
+.nav {
+    background-color: #232c32;
+}
+
+.nav-primary > ul > li > a {
+    position: relative;
+    display: block;
+    padding: 0;
+    text-align: center;
+    height: 50px;
+    overflow-y: hidden;
+    border: none;
+    transition: background-color .2s ease-in-out 0s;
+    span {
+        display: table-cell;
+        vertical-align: middle;
+        height: 50px;
+        width: 70px;
+        padding: 0 5px;
+        color: #fff;
+    }
+}
+
+.main-container {
+    display: table-cell;
+    vertical-align: top;
+    height: 100%;
+}
+.main {
+    padding-left: 30px;
+    padding-right: 30px;
+    .title {
+        margin: 20px 0 15px 0;
+        font-weight: 300;
+    }
+}
+.cover-list {
+    .item {
+        > img {
+            border-radius: 4px;
+        }
+    }
+    .text-wrap {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        h4 {
+            .ellipsis();
+        }
+    }
+}
+
+
+// footer
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #5a6a7a;
+    color: #c9d0d7;
+
+}
